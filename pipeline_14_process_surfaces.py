@@ -37,6 +37,72 @@ def run(index, json_file):
         remove_deep=True
     )
 
+    postprocess_freesurfer_surfaces(
+        subject_id,
+        subj_output_path,
+        'multilayer.11.ds.ds_surf_norm.fixed.gii',  # name of output file
+        n_surfaces=11,
+        ds_factor=0.1,
+        orientation='ds_surf_norm',
+        fix_orientation=True,
+        remove_deep=True,
+    )
+
+    postprocess_freesurfer_surfaces(
+        subject_id,
+        subj_output_path,
+        'multilayer.11.ds.ds_surf_norm.not_fixed.gii',  # name of output file
+        n_surfaces=11,
+        ds_factor=0.1,
+        orientation='ds_surf_norm',
+        fix_orientation=False,
+        remove_deep=True,
+    )
+
+    postprocess_freesurfer_surfaces(
+        subject_id,
+        subj_output_path,
+        'multilayer.11.ds.orig_surf_norm.fixed.gii',  # name of output file
+        n_surfaces=11,
+        ds_factor=0.1,
+        orientation='orig_surf_norm',
+        fix_orientation=True,
+        remove_deep=True,
+    )
+
+    postprocess_freesurfer_surfaces(
+        subject_id,
+        subj_output_path,
+        'multilayer.11.ds.orig_surf_norm.not_fixed.gii',  # name of output file
+        n_surfaces=11,
+        ds_factor=0.1,
+        orientation='orig_surf_norm',
+        fix_orientation=False,
+        remove_deep=True,
+    )
+
+    postprocess_freesurfer_surfaces(
+        subject_id,
+        subj_output_path,
+        'multilayer.11.ds.cps.fixed.gii',  # name of output file
+        n_surfaces=11,
+        ds_factor=0.1,
+        orientation='cps',
+        fix_orientation=True,
+        remove_deep=True,
+    )
+
+    postprocess_freesurfer_surfaces(
+        subject_id,
+        subj_output_path,
+        'multilayer.11.ds.cps.not_fixed.gii',  # name of output file
+        n_surfaces=11,
+        ds_factor=0.1,
+        orientation='cps',
+        fix_orientation=False,
+        remove_deep=True,
+    )
+
 
 if __name__=='__main__':
     for index in range(8):
